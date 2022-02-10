@@ -42,4 +42,9 @@
       </select>
       <button type="submit" class="btn btn-primary mt-4">Create</button>
   </form>
+  <div>
+    <a href="{{route("comics.index")}}">
+        <button type="button" class="btn btn-success mt-3">Back</button>
+    </a>
+</div>
 @endsection

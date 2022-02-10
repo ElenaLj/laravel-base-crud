@@ -42,6 +42,11 @@
         <option {{$comic->type == "comic book" ? "selected" : ""}}>comic book</option>
         <option {{$comic->type == "graphic novel" ? "selected" : ""}}>graphic novel</option>
       </select>
-      <button type="submit" class="btn btn-primary mt-4">Create</button>
+      <button type="submit" class="btn btn-primary mt-4">Modify</button>
   </form>
+  <div>
+    <a href="{{route("comics.index")}}">
+        <button type="button" class="btn btn-success mt-2">Back</button>
+    </a>
+</div>
 @endsection

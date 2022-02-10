@@ -6,7 +6,7 @@
     <p class="mt-3 mb-3">{{$comic->description}}</p>
     <div>
         <a href="{{route("comics.index")}}">
-            <button type="button" class="btn btn-danger">Back</button>
+            <button type="button" class="btn btn-success">Back</button>
         </a>
     </div>
 @endsection
