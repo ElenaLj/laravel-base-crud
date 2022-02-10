@@ -35,7 +35,7 @@
     </div>
 
     <div class="form-group">
-      <label for="type">Example select</label>
+      <label for="type">Select genre</label>
       <select class="form-control" id="type" name="type">
         <option>comic book</option>
         <option>graphic novel</option>
