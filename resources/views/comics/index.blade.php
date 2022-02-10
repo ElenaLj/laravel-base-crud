@@ -23,7 +23,7 @@
             <td>{{$comic->type}}</td>
             <td>$ {{$comic->price}}</td>
             <td>
-                <a href="{{route("comic-books.show", $comic->id)}}">
+                <a href="{{route("comics.show", $comic->id)}}">
                     <button type="button" class="btn btn-danger">Open</button>
                 </a>
             </td>

@@ -5,7 +5,7 @@
     <img src="{{asset("$comic->thumb")}}" alt="{{$comic->title}}" class="img-thumbnail">
     <p class="mt-3 mb-3">{{$comic->description}}</p>
     <div>
-        <a href="{{route("comic-books.index")}}">
+        <a href="{{route("comics.index")}}">
             <button type="button" class="btn btn-danger">Back</button>
         </a>
     </div>
