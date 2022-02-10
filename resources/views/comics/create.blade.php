@@ -40,5 +40,6 @@
         <option>comic book</option>
         <option>graphic novel</option>
       </select>
+      <button type="submit" class="btn btn-primary mt-4">Create</button>
   </form>
 @endsection
