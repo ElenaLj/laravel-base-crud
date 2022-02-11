@@ -22,6 +22,7 @@
         <th scope="col">Price</th>
         <th scope="col">More Info</th>
         <th scope="col">Change settings</th>
+        <th scope="col">Remove record</th>
       </tr>
     </thead>
     <tbody>
@@ -32,13 +33,20 @@
             <td>$ {{$comic->price}}</td>
             <td>
                 <a href="{{route("comics.show", $comic->id)}}">
-                    <button type="button" class="btn btn-primary">Open</button>
+                    <button type="button" class="btn btn-primary text-center">Open</button>
                 </a>
             </td>
             <td>
               <a href="{{route("comics.edit", $comic->id)}}">
                   <button type="button" class="btn btn-warning">Modify</button>
               </a>
+          </td>
+          <td>
+            <form action="{{route("comics.destroy", $comic->id)}}" method="POST">
+              @csrf
+              @method("DELETE")
+            </form>
+            <button type="submit" class="btn btn-danger">Delete</button>
           </td>
           </tr>
         @endforeach 
