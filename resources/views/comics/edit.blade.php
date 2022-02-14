@@ -48,5 +48,5 @@
     <a href="{{route("comics.index")}}">
         <button type="button" class="btn btn-success mt-2">Back</button>
     </a>
-</div>
+  </div>
 @endsection

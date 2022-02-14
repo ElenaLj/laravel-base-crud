@@ -46,5 +46,15 @@
     <a href="{{route("comics.index")}}">
         <button type="button" class="btn btn-success mt-3">Back</button>
     </a>
-</div>
+  </div>
+
+  @if ($errors->any())
+    <div class="alert alert-danger mt-2">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+  @endif
 @endsection
