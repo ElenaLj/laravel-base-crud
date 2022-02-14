@@ -107,6 +107,23 @@ class ComicController extends Controller
         // get datas from form
         $data = $request->all();
 
+
+        // validation
+        $request->validate(
+            [
+               "title" => "required|string|max:50|unique:comics,title,{$comic->id}",
+               "description" => "required|string",
+               "thumb" => "nullable|url",
+               "price" => "required|numeric|min:0.01",
+               "series" => "required|string|max:50",
+               "sale_date" => "required|string|max:50",
+               "type" => [
+                "required", 
+                Rule::in(["comic book", "graphic novel"])
+                ],
+            ]
+        );
+
         //update new resource with new datas
         $comic->title = $data["title"];
         $comic->description = $data["description"];
